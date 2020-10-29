@@ -1,2 +1,3 @@
 # Cupic-Java-2018-19
-Introduction to Java by Marko Cupic @FER
+In 2018/19 I attended course called "Introduction to Java" at University of Zagreb, Faculty of Electrical Engineering and Computing.
+There are only 8 homeworks because, unfortunately, I voluntarily quit after first half of the course.
