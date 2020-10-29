@@ -1,0 +1,43 @@
+Dajem ti ocjenu jedan zato što minimalni uvjeti za prvi zadatak nisu ispunjeni
+
+1.Zadatak
+-> Minimalni uvjet nije zadovoljen. Biljka se nacrta ali je nakošena što naravno ne bi trebalo biti.
+   Vjerojatno si vec primjetio ali to ti se desava zato sto starting direction vektoru saljes
+   angle koji je u stupnjevima.
+-> Isto tako ti si pretpostavio da je unos 1.0 / 2.05 no trebao si postupati da je 1.0 /2.05 valjano(ne spada u 
+   minimalne uvjete ali samo da napomenem)
+-> Mozda bi bilo dobro da se mrvicu vise potrudis za kvalitetan javadoc
+
+2.Zadatak
+->Minimalni uvjeti su ispunjeni
+->Nemam nista posebno za primjedbu osim to sto bi mogao malo organizirati projekt u pakete. Npr. lexer i parser
+  te njihove pripadne razrede si mogao staviti u jedan paket.
+  
+  
+----------------------------------------------------------------------------------------------------------------
+Ova zadaća ocijenjena je ocjenom 1 jer ne zadovoljava minimalne uvjete definirane za prvi zadatak (konkretno, ne iscrtava se plant2 već se baca iznimka).
+
+1. zadatak ---> NE ZADOVOLJAVA MINIMALNE UVJETE
+Dokumentacija svih razreda, metoda i članskih varijabli je vrlo štura, a u razredu Context nedostaje dokumentacija razreda. Ostale su zakomentirane neke naredbe (npr. u konstruktoru TurtleState provjere za null vrijednosti).
+Savjet kod metode generate: na demonstraturama mi je profesor rekao da bi bilo bolje i sigurnije pretvoriti help u polje charactera (help.toCharArray()) pa onda u kraćem obliku for petlje iterirati po tom polju umjesto koristiti metodu charAt. Razlog je taj što postoje neki characteri koji ne koriste samo dva bajta za pohranu te to ovisi o kodnoj stranici. 
+Pokretanje demo programa za plant2 vodi do bacanja iznimke IllegalArgumentException. U iznimci je navedeno da je greška u 165. liniji razreda LSystemBuilderImpl, konkretno u metodi configureFromText. Iako je dobro što si provjeravao jesu li svi argumenti korektni, u ovom slučaju se baca iznimka iako se ne bi trebala. Naime, trenutna linija je splitana po razmacima, ali pri definiranju unitLengthDegreeScaler ne moraju biti razmaci između dva broja koja se dijele (npr. validno je "unitLengthDegreeScaler 2 /4", kao i "unitLengthDegreeScaler 2/4"). Zato u primjeru plant2 prepozna da je line.length = 3 i baci se iznimka.
+Metoda configureFromText je stvarno dosta dugačka i bilo bi bolje da je razlomljena na privatne metode (npr. metoda koja provjerava postoji li očekivan broj argumenata i baca iznimku ako ne postoji).
+
+2. zadatak
+U StudentDB je stavljen path "database.txt", a u projektu nije priložen database.txt. Takve stvari bi trebalo provjeriti prije nego što se zadaća uploada. Nema ispisa "Using index for record retrieval". 
+Program puca ako se unese upit npr. "query lastName LIKE "B*b*"" sa IllegalArgumentException, iako u tekstu zadaće na 8. stranici piše: "If user enters more wildcard characters, throw an exception (and catch it where appropriate and write error message to user; don't terminate the program).". Trebalo je uhvatiti tu iznimku u mainu.
+Metodu recordsFormatter je mogla biti u nekom zasebnom razredu kao statička metoda. 
+U StudentDatabase će se baciti NumberFormatException ako član na indeksu 3 nije broj. Bilo bi bolje to uhvatiti i vratiti kao IllegalArgumentException.
+U razredu ComparisonOperators se sve moglo napisati mnogo kraće pomoću lambda izraza, npr. : ...LESS = (s1, s2) -> s1.compareTo(s2) < 0; .
+Metoda accepts u razredu QueryFilter ima nepotrebnog ponavljanja, moglo se jednostavno napisati:
+
+for(ConditionalExpression expression : list) {
+			if(!expression.getComparisonOperator().satisfied(
+					expression.getFieldGetter().get(record), 
+					expression.getStringLiteral())) {
+				return false;
+			}
+		}
+		return true;
+	}
+------------------------------------------------------------------------------------------------------------------

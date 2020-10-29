@@ -1,0 +1,9 @@
+Poruka namijenjena recenzentu/profesoru.
+
+Nažalost nisam stigao napisati potpunu zadaću. Potrudio sam se koliko ide,
+ali loše sam procijenio vrijeme budući da su bili i kolokviji trenutno.
+
+Iz tog razloga se unaprijed ispričavam što čitate krnju dz (fali dosta javadoca
+te glavni dio ove zadaće - massrename komanda).
+
+Srdačan pozdrav, Luka

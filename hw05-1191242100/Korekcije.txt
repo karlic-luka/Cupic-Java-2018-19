@@ -1,0 +1,19 @@
+Za pocetak, zahvaljujem se na detaljnim recenzijama. Ocigledno su pomogle
+uvidjeti greške, stoga se nadam da ih necu ponavljati vise.
+Zbog nedostatka vremena trenutno nisam ispravio skroz sve, nego one koje su kvarile
+funkcionalnost programa. Ostale svakako imam na umu za dalje.
+------------------------------------------------------------
+
+1.zadatak:
+U razredu build u metodi draw sam prebacio kut u radijane jer su ostali u stupnjevima.
+Dodao sam javadoc za opis razreda Context.
+
+U metodi configureFromText nije mi radilo npr "2/ 4"
+Sada sam to sredio tako da sam prvo zamijenio znak '/' s razmakom, zatim splitao po razmaku.
+Automatski vise nema ponavljanja koda.
+
+2.zadatak:
+Dodao sam Using index for record retrieval.
+Uhvatio sam grešku ako se unese vise od jednog wildcarda.
+Preuredio sam formatiranje buduci da je bilo dosta copy-pastea te sam 
+na prethodnom satu naucio za metodu "repeat" haha.

@@ -1,0 +1,12 @@
+Prije svega, zahvaljujem se na detaljno napisanim recenzijama.
+Ispravio sam krucijalne greške poput zatvaranja scannera u petlji (i otvaranja istoga u petlji) zbog 
+čega su mi se rušili programi. 
+Također, dodao sam komentare u javadoc poput "argumenti komandne linije se ne koriste (1. i 3. zadatak) 
+te "program završava unosom riječi "kraj" ".
+Dodao sam uvjet u drugom zadatku koji provjerava je li parametar negativan te ovisno o tome baca iznimku.
+
+Ovako napisana zadaća sada zadovoljava minimalne uvjete, a nadam se i više od toga. 
+Ostale stvari koje se tiču boljeg programiranja (dupliciranje koda npr. za ispis) imam na pameti, međutim 
+nisam ih trenutno prepravljao. U svakom slučaju, još jednom se zahvaljujem na savjetima.
+
+Srdačan pozdrav, Luka :)
